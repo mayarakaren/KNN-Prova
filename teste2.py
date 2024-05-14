@@ -8,12 +8,11 @@ teste = pd.read_csv('iris.data')
 
 scaler = MinMaxScaler()
 treinodataNormalized = scaler.fit_transform(treino.drop(columns="class"))
+testeDataNormalized = scaler.transform(teste.drop(columns="class"))
 
 x_treino = pd.DataFrame(treinodataNormalized, columns=treino.drop(columns="class").columns)
 y_treino = treino['class']
 
-
-testeDataNormalized = scaler.transform(teste.drop(columns="class"))
 x_teste = pd.DataFrame(testeDataNormalized, columns=teste.drop(columns="class").columns)
 y_teste = teste['class']
 

@@ -9,7 +9,7 @@ df = pd.DataFrame(data)
 
 # Normalizar as características
 scaler = MinMaxScaler()
-personDataNormalized = scaler.fit_transform(data.drop(columns=['class']))  # Normalizar todas as colunas, exceto 'variety'
+personDataNormalized = scaler.fit_transform(data.drop(columns=['class']))  # Normalizar todas as colunas, exceto 'class'
     
 # Separar características e classe alvo
 x = personDataNormalized
